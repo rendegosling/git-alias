@@ -1,0 +1,17 @@
+[alias]
+        co = checkout
+        ec = config --global -e
+        up = !git pull --rebase --prune $@ && git submodule update --init --recursive
+        cob = checkout -b
+        cm = !git add -A && git commit -m
+        rb = !git pull --rebase
+        save = !git add -A && git commit -m 'SAVEPOINT'
+        wip = commit -am "WIP"
+        undo = reset HEAD~1 --mixed
+        amend = commit -a --amend
+        wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
+        l = !git log --oneline
+
+[user]
+        email = renlesterdeguzman@gmail.com
+        name = Ren 
